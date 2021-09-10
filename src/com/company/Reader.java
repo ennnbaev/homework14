@@ -1,6 +1,6 @@
 package com.company;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Reader implements Runnable{
@@ -12,7 +12,7 @@ public class Reader implements Runnable{
     public void run() {
         while (true){
             if(listInReader.isEmpty()){
-                LocalDateTime loc=LocalDateTime.now();
+                LocalDate loc=LocalDate.now();
                 System.out.println("The list is empty "+loc );
             }
             else {

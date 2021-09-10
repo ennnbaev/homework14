@@ -1,8 +1,9 @@
 package com.company;
-
 import java.util.List;
+import java.util.Random;
 
 public class Writer implements Runnable {
+    Random random = new Random();
     List<Integer> listInWriter;
     public Writer(List<Integer> input) {
     listInWriter=input;
@@ -11,7 +12,7 @@ public class Writer implements Runnable {
     @Override
     public void run() {
 while (true){
-    int random_number1 =  (int) (Math.random() * 10);
+    int random_number1 = random.nextInt();
     listInWriter.add(random_number1);
     try {
         Thread.sleep(2500);
